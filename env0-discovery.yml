@@ -16,13 +16,5 @@ commonConfig: &defaultConfig
   pullRequestPlanDeployments: false
   vcsPrCommentsEnabled: false
 
-environments:
-  noop-approval-test-env:
-    name: noop-approval-test-env
-    workspaceName: noop-approval-test-env
-    projectName: test-project-yamini #correct
-    templateName: noop-discovery-test
-    revision: main
-    variableFiles:
-      - path: terraform/common.tfvars
-    <<: *defaultConfig
+environments: {}
+
