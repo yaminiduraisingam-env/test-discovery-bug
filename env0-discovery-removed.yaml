@@ -1,0 +1,21 @@
+# env0-discovery.yaml
+# ─────────────────────────────────────────────────────────────
+# PHASE 2 — Environment is REMOVED from the discovery file.
+#
+# Replace the Phase 1 env0-discovery.yaml with this content to
+# simulate the bug: env0 should detect that noop-approval-test-env
+# is no longer listed and attempt to destroy it.
+#
+# EXPECTED: env0 should request approval before destroying.
+# ACTUAL (bug): env0 destroys without approval.
+# ─────────────────────────────────────────────────────────────
+
+commonConfig: &defaultConfig
+  requiresApproval: true
+  continuousDeployment: true
+  autoDeployOnPathChangesOnly: false
+  pullRequestPlanDeployments: false
+  vcsPrCommentsEnabled: false
+
+environments: {}
+# noop-approval-test-env intentionally removed — triggers destroy
