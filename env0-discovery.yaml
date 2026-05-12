@@ -10,7 +10,7 @@
 # ─────────────────────────────────────────────────────────────
 
 commonConfig: &defaultConfig
-  requiresApproval: true          # <── This is the critical setting under test
+  requiresApproval: true          
   continuousDeployment: true
   autoDeployOnPathChangesOnly: false
   pullRequestPlanDeployments: false
