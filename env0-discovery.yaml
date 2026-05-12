@@ -20,8 +20,8 @@ environments:
   noop-approval-test-env:
     name: noop-approval-test-env
     workspaceName: noop-approval-test-env
-    projectName: <YOUR_PROJECT_NAME>       # replace with your env0 project name
-    templateName: <YOUR_TEMPLATE_NAME>     # replace with your env0 template name
+    projectName: "test-bug"
+    templateName: "test-discovery-bug"
     revision: main
     variableFiles:
       - path: terraform/common.tfvars
