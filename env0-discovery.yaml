@@ -1,0 +1,28 @@
+# env0-discovery.yaml
+# ─────────────────────────────────────────────────────────────
+# PHASE 1 — Environment IS present in discovery file.
+#
+# This is the starting state. Commit this file first to let env0
+# discover and deploy the environment with requiresApproval: true.
+#
+# After the initial deploy is confirmed, move to PHASE 2 by
+# switching to env0-discovery-removed.yaml to trigger the bug.
+# ─────────────────────────────────────────────────────────────
+
+commonConfig: &defaultConfig
+  requiresApproval: true          # <── This is the critical setting under test
+  continuousDeployment: true
+  autoDeployOnPathChangesOnly: false
+  pullRequestPlanDeployments: false
+  vcsPrCommentsEnabled: false
+
+environments:
+  noop-approval-test-env:
+    name: noop-approval-test-env
+    workspaceName: noop-approval-test-env
+    projectName: <YOUR_PROJECT_NAME>       # replace with your env0 project name
+    templateName: <YOUR_TEMPLATE_NAME>     # replace with your env0 template name
+    revision: main
+    variableFiles:
+      - path: terraform/common.tfvars
+    <<: *defaultConfig
