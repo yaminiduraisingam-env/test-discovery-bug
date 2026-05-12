@@ -9,11 +9,11 @@ Check off each item as you go and record your observations in the Notes column.
 
 | # | Check | Expected | Notes |
 |---|-------|----------|-------|
-| 1.1 | env0 discovers `noop-approval-test-env` from the YAML | Environment appears in project | |
-| 1.2 | Initial deploy triggers and enters "Waiting for Approval" | Approval gate shown | |
-| 1.3 | After approving, apply completes successfully | `null_resource.noop` created | |
-| 1.4 | UI shows `requiresApproval: true` on the environment settings page | Toggle is ON | |
-| 1.5 | API confirms `requiresApproval: true` (see API check below) | `"requiresApproval": true` in response | |
+| 1.1 | env0 discovers `noop-approval-test-env` from the YAML | Environment appears in project |Done|
+| 1.2 | Initial deploy triggers and enters "Waiting for Approval" | Approval gate shown |Done|
+| 1.3 | After approving, apply completes successfully | `null_resource.noop` created |Done|
+| 1.4 | UI shows `requiresApproval: true` on the environment settings page | Toggle is ON |Done|
+| 1.5 | API confirms `requiresApproval: true` (see API check below) | `"requiresApproval": true` in response |Done|
 
 ---
 
